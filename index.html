@@ -2,51 +2,95 @@
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KONGU OTT - Omalur Official OTT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONGU TV - கொங்கு டிவி | Andigoundanur V18 LIVE</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#050505;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
-.header{background:linear-gradient(90deg,#ff6b00,#ff9500);padding:16px;text-align:center;font-weight:900;font-size:20px;letter-spacing:1px;position:sticky;top:0;z-index:10}
-.filters{display:flex;gap:10px;padding:14px;overflow:auto}
-.f{padding:8px 18px;border-radius:20px;background:#1e1e1e;border:1px solid #333;color:#fff;white-space:nowrap;font-weight:600}
-.f.active{background:#ff6b00;border-color:#ff6b00}
+body{margin:0;background:#000;color:#fff;font-family:Arial}
+.header{background:linear-gradient(90deg,#ff0000,#00ff00);padding:10px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;font-size:22px}
+.logo span{color:#fff}
+.search{width:90%;margin:10px auto;display:block;padding:12px;border-radius:20px;border:none}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px}
-.card{background:#121212;border-radius:14px;overflow:hidden;border:1px solid #222}
-.card img{width:100%;height:120px;object-fit:cover}
-.body{padding:10px}
-.title{font-size:13px;font-weight:700;line-height:1.3;min-height:34px}
-.meta{font-size:11px;color:#888;margin-top:4px}
-.play{width:100%;margin-top:10px;padding:9px;background:#ff6b00;border:none;border-radius:9px;color:#fff;font-weight:800;letter-spacing:0.5px}
-.footer{text-align:center;padding:20px;color:#555;font-size:12px}
+.panel{background:linear-gradient(#fff,#ffcccc,#ccffcc);color:#000;padding:18px;border-radius:16px;text-align:center;font-weight:bold;font-size:16px;box-shadow:0 4px 10px rgba(0,0,0,0.3)}
+.live-box{margin:12px;background:#111;border-radius:16px;overflow:hidden;border:2px solid #00ff00}
+.live-head{background:red;color:#fff;padding:5px 10px;font-weight:bold}
+.wallet{background:#111;margin:12px;border-radius:16px;padding:15px;border:1px solid gold}
+.wallet h3{color:gold}
+.btn{width:100%;padding:12px;background:linear-gradient(90deg,red,green);color:#fff;border:none;border-radius:10px;font-weight:bold;margin-top:8px}
+.movie-row{display:flex;overflow-x:auto;gap:10px;padding:10px}
+.movie{min-width:120px;background:#222;border-radius:10px;padding:5px;text-align:center}
+.secure{color:#00ff00;border:1px solid #00ff00;padding:3px 8px;border-radius:20px;font-size:12px}
 </style>
 </head>
 <body>
-<div class="header">🔥 KONGU OTT - OMALUR 🔥</div>
-<div class="filters">
-<button class="f active">All Videos</button>
-<button class="f">School Link</button>
-<button class="f">Kovil Festival</button>
-<button class="f">Suththi Parkalam</button>
+
+<div class="header">
+<div class="logo">📺 KONGU TV<br><span style="font-size:14px">கொங்கு டிவி - Andigoundanur</span></div>
+<div>🔒 <span class="secure">256-bit SECURE - NO Deposit, NO Autopay</span></div>
 </div>
+
+<input class="search" placeholder="Search news, shows, videos...">
+
+<div style="padding:0 12px"><h2>LIVE TV • <span style="color:#00ff00">1.2K watching</span></h2></div>
+
+<div class="live-box">
+<div class="live-head">தமிழ் செய்தி LIVE - BR NEWS Omalur</div>
+<iframe width="100%" height="220" src="https://www.youtube.com/embed/live_stream?channel=UC..." frameborder="0" allowfullscreen></iframe>
+<div style="padding:8px">LIVE NOW: தமிழ் செய்தி - Omalur | Andigoundanur</div>
+</div>
+
+<h3 style="padding-left:12px">Super App Panels</h3>
 <div class="grid">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500">
-<div class="body"><div class="title">Omalur Govt School Annual Day 2026 Full Video</div><div class="meta">2.3K views • Omalur</div><button class="play">▶ PLAY FREE</button></div>
+<div class="panel">📡<br>Live News</div>
+<div class="panel">📍<br>Andigoundanur Panel</div>
+<div class="panel">₹<br>Earning Panel<br><small>Watch +₹20</small></div>
+<div class="panel">🎧<br>Music Panel</div>
+<div class="panel">▶️💰<br>YouTube Earnings</div>
+<div class="panel">🎬<br>Movie Panel</div>
 </div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500">
-<div class="body"><div class="title">Kottai Mariamman Kovil Ther Thiruvizha</div><div class="meta">5.1K views • Omalur</div><button class="play">▶ PLAY FREE</button></div>
+
+<div class="wallet">
+<h3>🔒 SECURE WALLET - BR NEWS</h3>
+<p>✅ No Deposit - Yaarum kasu kudukka vendam<br>
+✅ No Autopay - Auto kasu edukathu<br>
+✅ Real UPI Withdraw - ₹100 iruntha withdraw</p>
+<p>Balance: <b style="color:#00ff00;font-size:20px">₹<span id="bal">120</span></b></p>
+<button class="btn" onclick="addMoney(20)">📺 Video Paarthu +₹20 Earn</button>
+<button class="btn" onclick="addMoney(50)">📤 Share Panni +₹50 Earn</button>
+<input id="upi" placeholder="UPI ID - eg: boomesh@upi" style="width:100%;padding:10px;margin-top:10px;border-radius:8px">
+<button class="btn" style="background:gold;color:#000" onclick="withdraw()">💸 UPI Withdraw</button>
 </div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500">
-<div class="body"><div class="title">Omalur Lake - Evening View 4K</div><div class="meta">1.2K views • Nature</div><button class="play">▶ PLAY FREE</button></div>
+
+<h3 style="padding-left:12px">Movies - Tamil</h3>
+<div class="movie-row">
+<div class="movie">🔥 விக்ரம்<br><small>Action 2024</small></div>
+<div class="movie">💙 ஜெய் பீம்<br><small>Drama 2023</small></div>
+<div class="movie">😂 சான்<br><small>Comedy 2024</small></div>
+<div class="movie">⚔️ மாஸ்டர்<br><small>Thriller 2023</small></div>
 </div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500">
-<div class="body"><div class="title">Omalur Market - Suththi Parkalam</div><div class="meta">890 views • Vlog</div><button class="play">▶ PLAY FREE</button></div>
+
+<h3 style="padding-left:12px">Music</h3>
+<div class="movie-row">
+<div class="movie">🎵 Anirudh Hits<br><small>50 songs</small></div>
+<div class="movie">🎶 90s Melody<br><small>35 songs</small></div>
+<div class="movie">🥁 Kuthu Beats<br><small>28 songs</small></div>
 </div>
+
+<div style="padding:20px;text-align:center;color:#888">
+BR NEWS - Omalur | Kongu OTT V18 LIVE<br>
+Andigoundanur Village Super App - Made by Boomesh Raju
 </div>
-<div class="footer">© 2026 KONGU OTT | Omalur Official | Made with ❤️</div>
+
+<script>
+let bal=120;
+function addMoney(a){bal+=a;document.getElementById('bal').innerText=bal;alert('₹'+a+' Added! New Balance ₹'+bal)}
+function withdraw(){
+ let upi=document.getElementById('upi').value;
+ if(!upi){alert('UPI ID podu da K!');return}
+ if(bal<100){alert('Minimum ₹100 venum da K! Ipa ₹'+bal+' than irukku');return}
+ alert('Withdraw Request Sent da K! ₹'+bal+' to '+upi+' - 24hr la varum!');
+ bal=0;document.getElementById('bal').innerText=bal;
+}
+</script>
 </body>
 </html>
